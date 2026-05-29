@@ -4,3 +4,8 @@ langchain-community
 langchain-ollama 
 jupyterlab
 pydantic
+asyncpg
+sqlalchemy[asyncio]
+alembic
+psycopg2-binary
+greenlet
