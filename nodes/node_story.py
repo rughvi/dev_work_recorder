@@ -5,14 +5,14 @@ from tools.story_tools import story_tools
 
 llm_with_story_tools = llm.bind_tools(story_tools)
 
-def node_story(state):
-    response = llm_with_story_tools.invoke([
+async def node_story(state):
+    response = await llm_with_story_tools.ainvoke([
         {
             "role":"system",
             "content": """
                 You are a database assistant.
                 Rules:
-                1. Always check if story exists first
+                1. Always check if story as a number exists first
                 2. Insert only if story does not exists
             """
         },

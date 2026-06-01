@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import (
 from sqlalchemy.orm import declarative_base
 
 DATABASE_URL = (
-    "postgresql+asyncpg://appuser:apppass@postgres:5432/appdb"
+    "postgresql+asyncpg://appuser:apppass@localhost:5432/appdb"
 )
 
 engine = create_async_engine(
